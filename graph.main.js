@@ -16,6 +16,7 @@
          downloadSvgStr,
          downloadObjectAsJson,
          initLayer,
+         ServiceZiDian,
          // AlignGuidelines,
          pluginConfig,
          pluginZi,
@@ -61,7 +62,8 @@
 
      StartServices(core, {}, [
          "data",
-         "file-manager"
+         "file-manager",
+         ["zidian",ServiceZiDian,0]
      ]).then((d) => {
          fetch("./test.json").then((d0) => (d0.json())).then((d1) => {
              loading.remove()
